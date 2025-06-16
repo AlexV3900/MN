@@ -1,11 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 40px;
-    background-color: #f9f9f9;
+    background-color: #000;
+    color: #fff;
 }
 
 h1 {
-    color: #333;
+    color: #fff;
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 button {
@@ -20,4 +22,13 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+    }
 }
